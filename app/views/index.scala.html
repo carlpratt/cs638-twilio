@@ -50,20 +50,28 @@
             <li id="messaging" class="current">Messaging</li>
             <li id="call">Voice Call</li>
         </ul>
-        <form>
-            <p>Enter your mobile phone number:</p>
-            <input id="to" type="text" 
-                placeholder="ex: +16518675309"/>
-            <button>Send me a message</button>
+        <form name="input" action="message" method="post">
+            Number: <input type="text" name="to">
+            Message: <input type="text" name="message">
+            <input type="submit" value="Submit">
         </form>
+        <!--<form>-->
+            <!--<p>Enter your mobile phone number:</p>-->
+            <!--<input id="to" type="text" -->
+                <!--placeholder="ex: +16518675309"/>-->
+            <!--<p>Enter a message:</p>-->
+            <!--<input id="message" type="text"-->
+                   <!--placeholder="Your Message Here"/>-->
+            <!--<button>Send me a message</button>-->
+        <!--</form>-->
     </div>
-    <div id="footer">
-        <span>Twilio</span><img src="/assets/img/TwilioQuest32.png" alt="TwilioQuest"/>Quest
-        <p>
-            Made with <img src="/assets/img/heart.gif" alt="heart"> by your pals 
-            <a href="http://www.twilio.com">@@twilio</a>.
-        </p>
-    </div>
+    <!--<div id="footer">-->
+        <!--<span>Twilio</span><img src="/assets/img/TwilioQuest32.png" alt="TwilioQuest"/>Quest-->
+        <!--<p>-->
+            <!--Made with <img src="/assets/img/heart.gif" alt="heart"> by your pals -->
+            <!--<a href="http://www.twilio.com">@@twilio</a>.-->
+        <!--</p>-->
+    <!--</div>-->
 
     <!-- Some dirty JavaScript to help drive our UI -->
     <script src="/assets/js/ui.js"></script>

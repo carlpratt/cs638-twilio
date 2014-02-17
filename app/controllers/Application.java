@@ -54,15 +54,17 @@ public class Application extends Controller {
     	// Get POST data
         Map<String, String[]> params = request().body().asFormUrlEncoded();
         String to = params.get("to")[0];
+        String body = params.get("message")[0];
     	
     	SmsFactory smsFactory = mainAccount.getSmsFactory();
         Map<String, String> smsParams = new HashMap<String, String>();
         smsParams.put("To", to);
         smsParams.put("From", TWILIO_NUMBER);
-        smsParams.put("Body", "Good luck on your Twilio quest!");
+        smsParams.put("Body", body);
         smsFactory.create(smsParams);
     	
-        return ok("Message incoming!");
+        //return ok("Message incoming!");
+        return redirect(routes.Application.index());
     }
 
     // Render a TwiML document to give instructions for an outbound call
